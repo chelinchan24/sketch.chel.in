@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>Taiwanese Data Sketch Plugin BETA</title>
-        <link>https://sketch.chel.in/builds/beta/appcast.xml</link>
+        <link>http://sparkle-project.org/files/sparkletestcast.xml</link>
         <description>Taiwanese Data Sketch Plugin BETA</description>
         <language>en</language>
         <item>
