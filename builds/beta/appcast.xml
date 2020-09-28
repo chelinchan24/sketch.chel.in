@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Taiwanese Data Sketch Plugin BETA</title>
+        <link>https://sketch.chel.in/builds/beta/appcast.html</link>
+        <description>Taiwanese Data Sketch Plugin BETA</description>
+        <language>en</language>
+        <item>
+            <enclosure url="https://sketch.chel.in/builds/beta/taiwanese-data.sketchplugin.zip" sparkle:version="1.0"/>
+        </item>
+    </channel>
+</rss>
