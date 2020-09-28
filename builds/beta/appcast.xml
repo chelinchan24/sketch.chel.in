@@ -8,14 +8,14 @@
         <item>
             <title>Beta 0.1.0b</title>
             <description>
-                首個 Beta 測試版。
+                TEST
             </description>
             <enclosure url="https://sketch.chel.in/builds/beta/taiwanese-data_0.1.0b.sketchplugin.zip" sparkle:version="0.1.0b"/>
         </item>
         <item>
             <title>Beta 0.1.1b</title>
             <description>
-                測試更新推播。
+                TEST
             </description>
             <enclosure url="https://sketch.chel.in/builds/beta/taiwanese-data.sketchplugin_0.1.1b.zip" sparkle:version="0.1.1b"/>
         </item>
