@@ -18,11 +18,13 @@
                 TEST
             </description>
             <enclosure url="https://sketch.chel.in/builds/beta/taiwanese-data.sketchplugin_0.1.1b.zip" sparkle:version="0.1.1b"/>
+        </item>
+        <item>
             <title>Beta 0.1.2b</title>
             <description>
                 TEST
             </description>
-            <enclosure url="https://sketch.chel.in/builds/beta/taiwanese-data.sketchplugin_0.1.2b.zip" sparkle:version="0.1.2b"/>
+            <enclosure url="https://sketch.chel.in/builds/beta/taiwanese-data.sketchplugin_0.1.1b.zip" sparkle:version="0.1.2b"/>
         </item>
     </channel>
 </rss>
