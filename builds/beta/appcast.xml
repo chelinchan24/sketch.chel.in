@@ -17,7 +17,7 @@
             <description>
                 測試更新推播。
             </description>
-            <enclosure url="https://sketch.chel.in/builds/beta/taiwanese-data_0.1.1b.sketchplugin.zip" sparkle:version="0.1.1b"/>
+            <enclosure url="https://sketch.chel.in/builds/beta/taiwanese-data.sketchplugin_0.1.1b.zip" sparkle:version="0.1.1b"/>
         </item>
     </channel>
 </rss>
