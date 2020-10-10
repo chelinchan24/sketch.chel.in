@@ -67,7 +67,7 @@ a {
 .文字按鈕-內文 {
     color: #000000;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: none;
     transition: 0.2s ease;
     display: inline-flex;
@@ -189,6 +189,7 @@ a {
 .內文 {
     font-weight: 400;
     font-size: 16px;
+    color: #656565;
 }
 
 /* 動畫 */
@@ -711,7 +712,6 @@ a {
     .內文 {
         font-weight: 400;
         font-size: 15px;
-        opacity: 0.6;
     }
 
     /* 按鈕 */
