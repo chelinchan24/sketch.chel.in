@@ -56,7 +56,7 @@
         <div id="下載-頁首-內容-說明">
             <div id="下載-頁首-內容-說明-圖示"></div>
             <div class="大標題">謝謝<span class="多性別">妳</span>下載台灣資料</div>
-            <div class="大副標題">下載會自動開始。如果沒有，<a href="http://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.1.0b.sketchplugin.zip">請點擊這裡</a>。</div>
+            <div class="大副標題">下載會自動開始。如果沒有，<a href="https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.1.0b.sketchplugin.zip">請點擊這裡</a>。</div>
         </div>
         <div id="下載-頁首-內容-附註">
             <span class="多性別">妳</span>需要 Sketch 52.1 以上才能使用本套件。透過使用台灣資料，代表<span class="多性別">妳</span>同意<a href="https://chelinchan24.gitbook.io/taiwanese-data/quan-yi/terms-of-service">服務條款</a>。
@@ -170,11 +170,13 @@
 <script src="./js/main.js"></script>
 <script src="./js/sg.js" type="text/javascript"></script>
 <script>
-    var a = document.createElement('a');
-    a.href = "http://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.1.0b.sketchplugin.zip";
-    a.download = 'download';
+    $(document).ready (function () {
+        var a = document.createElement('a');
+        a.href = "https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.1.0b.sketchplugin.zip";
+        a.download = 'download';
 
-    a.click();
+        a.click();
+    })
 </script>
 </body>
 </html>
