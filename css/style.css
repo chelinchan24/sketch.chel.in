@@ -385,6 +385,14 @@ a {
     margin-bottom: 88px;
 }
 
+.介紹影片-桌面 {
+    display: block !important;
+}
+
+.介紹影片-行動 {
+    display: none !important;
+}
+
 .介紹段落-影片 video{
     width: 100%;
     height: auto;
@@ -703,6 +711,7 @@ a {
     .內文 {
         font-weight: 400;
         font-size: 15px;
+        opacity: 0.6;
     }
 
     /* 按鈕 */
@@ -780,5 +789,18 @@ a {
     .下載-介紹-兩欄-內容 {
         max-width: unset;
         width: 100%;
+    }
+
+    .介紹影片-桌面 {
+        display: none !important;
+    }
+
+    .介紹段落-影片 {
+        position: relative;
+        margin-bottom: 56px;
+    }
+
+    .介紹影片-行動 {
+        display: block !important;
     }
 }
