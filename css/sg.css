@@ -1,0 +1,224 @@
+/*
+多性別選項 Suitable Gender
+© 2020 詹喆麟
+http://chelinchan.com
+*/
+
+#多性別選項 {
+    background: #00000050;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 30000;
+    align-items: flex-end;
+    box-sizing: border-box;
+    touch-action: none;
+}
+
+@keyframes 多性別選項_關閉_動畫 {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes 多性別選項_開啟_動畫 {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.多性別選項_關閉 {
+    animation: 多性別選項_關閉_動畫 0.25s ease forwards;
+}
+
+.多性別選項_開啟 {
+    animation: 多性別選項_開啟_動畫 0.5s ease forwards;
+}
+
+#多性別選項-內容-容器 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 48px;
+}
+
+#多性別選項-內容-內容 {
+    height: auto;
+    display: flex;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 24px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 3px 17px 0 rgba(0,0,0,0.20);
+    border-radius: 8px;
+    max-width: 520px;
+    transition: 0.15s ease;
+}
+
+#多性別選項-上 {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.多性別選項-上-對話框 {
+}
+
+.多性別選項_不顯示 {
+    display: none !important;
+}
+
+.多性別選項-上-標題 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.多性別選項-上-說明 {
+    font-size: 16px;
+    color: #7B7B7B;
+}
+
+.多性別選項-上-說明-桌面 {
+    display: block;
+}
+
+.多性別選項-上-說明-行動 {
+    display: none;
+}
+
+#多性別選項-下 {
+
+}
+
+#多性別選項-下-上 {
+    display: flex;
+}
+
+#多性別選項-下-下 {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.多性別選項-按鈕 {
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    background: rgba(0,0,0,0.07);
+    border-radius: 6px;
+    font-size: 15px;
+    height: 48px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 8px;
+    font-weight: 500;
+    flex-direction: row;
+    transition: 0.15s ease;
+    box-shadow: inset 0 0 0 2px #00000000;
+    cursor: pointer;
+}
+
+.多性別選項-按鈕:hover {
+    transition: 0.15s ease;
+    box-shadow: inset 0 0 0 2px #00000050;
+}
+
+.多性別選項-按鈕:last-child {
+    margin-right: 0;
+}
+
+.多性別選項-按鈕_選擇 {
+    box-shadow: inset 0 0 0 2px #000000;
+}
+
+.多性別選項-按鈕_選擇:hover {
+    box-shadow: inset 0 0 0 2px #000000;
+}
+
+.多性別選項-按鈕_失焦 {
+    opacity: 0.5;
+    transition: 0.15s ease;
+}
+
+.多性別選項-按鈕_選擇:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('https://chelinchan.com/src/ic_sg_selected.svg');
+    margin-right: 8px;
+}
+
+.多性別選項-按鈕_套用 {
+    height: 48px;
+    width: 100%;
+    background: #282828;
+    font-size: 15px;
+    height: 48px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 6px;
+    color: #ffffff;
+    transition: 0.15s ease;
+    cursor: pointer
+}
+
+.多性別選項-按鈕_套用:hover {
+    opacity: 0.9;
+    transition: 0.15s ease;
+}
+
+@keyframes 多性別選項-按鈕_套用_動畫-進入 {
+    0% {
+        visibility: hidden;
+        transform: translate3d(0, 10px, 0);
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 48px;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.多性別選項-按鈕_套用_動畫-進入 {
+    animation: 多性別選項-按鈕_套用_動畫-進入 0.25s ease forwards;
+}
+
+@media screen and (max-width: 1024px) {
+    #多性別選項-內容-容器 {
+        padding: 12px;
+    }
+
+    .多性別選項-上-說明-桌面 {
+        display: none;
+    }
+
+    .多性別選項-上-說明-行動 {
+        display: block;
+    }
+}

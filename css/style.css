@@ -1,0 +1,779 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.背景_灰 {
+    background: #FAFAFA;
+}
+
+/* 區塊 */
+.區塊-全寬區塊 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+}
+
+.全寬區塊-內容 {
+    width: 100%;
+    max-width: 1100px;
+    display: block;
+}
+
+.內容-兩欄 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 48px;
+}
+
+.兩欄 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.三欄 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 按鈕 */
+.文字按鈕-內文 {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px transparent solid;
+}
+
+.文字按鈕-內文:after {
+    content: '';
+    width: 14px;
+    height: 12px;
+    background: url('../taiwanese-data/src/ic_arrow.png');
+    background-size: cover;
+    display: block;
+    margin-left: 8px;
+}
+
+.文字按鈕-內文:hover {
+    border-bottom: 2px #000000 solid;
+}
+
+.大按鈕 {
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px 24px;
+    display: inline-flex;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+}
+
+.大按鈕:last-child {
+    margin-right: 0;
+}
+
+.小按鈕 {
+    height: 42px;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    padding: 0px 16px;
+    display: inline-flex;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.大按鈕:hover, .小按鈕:hover {
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+
+.按鈕_黑 {
+    background: #000000;
+    color: #ffffff;
+}
+
+.按鈕_灰 {
+    background: #F1F1F1;
+    color: #000000;
+}
+
+/* 文字 */
+.換行 {
+    display: block;
+}
+
+.斷句 {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.大標題 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 67px;
+}
+
+.大副標題 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.大副標題 a {
+    color: #E4AB13;
+}
+
+.大副標題 a:hover {
+    color: #E4AB13;
+    border-bottom: 2px solid #E4AB13;
+}
+
+.中標題 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.中次標題 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+.中副標題 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.小標題 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.內文 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* 動畫 */
+@keyframes 動畫-捲動進入 {
+    0% {
+        visibility: hidden;
+        transform: translate3d(0, 50px, 0);
+    }
+    100% {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.動畫-捲動進入 {
+    opacity: 0;
+    /*visibility: hidden;*/
+    transition: opacity 0.5s ease-in-out;
+}
+
+.動畫-捲動進入_執行 {
+    opacity: 1;
+    /*visibility: visible;*/
+    animation: 動畫-捲動進入 0.5s ease-out;
+}
+
+@keyframes 動畫-淡入 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.動畫-淡入 {
+    opacity: 0;
+}
+
+.動畫-淡入_執行 {
+    opacity: 1;
+    animation: 動畫-淡入 0.75s linear;
+}
+
+/* 導覽列 */
+#導覽列 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 22px 24px;
+}
+
+#導覽列-內容 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#導覽列-內容-右 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.導覽列-內容-右-選項 {
+    margin-right: 40px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.導覽列-內容-右-選項:last-child {
+    margin-right: 0;
+}
+
+#導覽列-內容-左-logo {
+    background: url(../taiwanese-data/src/img_logo.png);
+    width: 103px;
+    height: 36px;
+    background-size: cover;
+}
+
+/* 頁首 */
+#首頁-頁首 {
+    min-height: 890px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 76px 0 rgba(0,0,0,0.05);position: relative;
+    overflow: hidden;
+}
+
+#首頁-頁首-標題-Sketch, #首頁-頁首-標題-大標題 {
+    margin-bottom: 42px;
+}
+
+#首頁-頁首-標題-Sketch:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: url(../taiwanese-data/src/ic_sketch.png);
+    background-size: cover;
+    margin-right: 8px;
+}
+
+#首頁-頁首-標題-Sketch {
+    color: #E4AB13;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+#首頁-頁首-標題-說明 {
+    margin-bottom: 88px;
+}
+
+#首頁-頁首-下層 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;height: 100%;
+}
+
+#首頁-頁首-下層-內容-右 {
+    /* width: 50%; */
+    display: block;height: 100%;
+}
+
+#首頁-頁首-下層-內容-右 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 890px;
+}
+
+.首頁-頁首-下層-內容-右-圖片_桌面 {
+    display: block;
+}
+
+.首頁-頁首-下層-內容-右-圖片_行動 {
+    display: none;
+}
+
+#首頁-頁首-標題-按鈕 {
+    display: block;
+}
+
+/* 介紹段落 */
+.介紹段落 {
+    padding: 120px 24px;
+}
+
+.介紹段落-標頭-標題 {
+    margin-bottom: 24px;
+}
+
+.介紹段落-標頭-說明 {
+    max-width: 526px;
+    margin-bottom: 56px;
+}
+
+.介紹段落-姓名標題, .介紹段落-地址標題, .介紹段落-電話標題 {
+    display: flex;
+    align-items: center;
+}
+
+.介紹段落-姓名標題:after, .介紹段落-地址標題:after, .介紹段落-電話標題:after {
+    content: '';
+    background-size: cover !important;
+    width: 60px;
+    height: 60px;
+    margin-left: 24px;
+}
+
+.介紹段落-姓名標題:after {
+    background: url('../taiwanese-data/src/ic_name.png');
+}
+
+.介紹段落-地址標題:after {
+    background: url('../taiwanese-data/src/ic_address.png');
+}
+
+.介紹段落-電話標題:after {
+    background: url('../taiwanese-data/src/ic_number.png');
+}
+
+.介紹段落-影片 {
+    position: relative;
+    margin-bottom: 88px;
+}
+
+.介紹段落-影片 video{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display:block;
+}
+
+.介紹段落-影片-遮罩 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="8" width="8"><g transform="translate(0,-972.36218)"><path fill="#fff" d="m0,972.36c4.4183,0,8,3.5817,8,8v-8h-8z"/></g></svg>'),
+    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="8" width="8"><g transform="translate(0,-972.36218)"><path fill="#fff" d="m0,980.36c0-4.4183,3.5817-8,8-8h-8v8z"/></g></svg>'),
+    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="8" width="8"><g transform="translate(0,-972.36218)"><path fill="#fff" d="m8,980.36c-4.4183,0-8-3.5817-8-8v8h8z"/></g></svg>'),
+    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="8" width="8"><g transform="translate(0,-972.36218)"><path fill="#fff" d="m8,972.36c0,4.4183-3.5817,8-8,8h8v-8z"/></g></svg>');
+    background-position: top right, top left, bottom left, bottom right;
+    background-repeat: no-repeat;
+}
+
+.介紹段落-介紹 {
+    gap: 48px;
+}
+
+.介紹段落-介紹-內容-內文 {
+    max-width: 419px;
+}
+
+/* 下載段落 */
+.下載段落 {
+    box-shadow: inset 0 4px 0 0 #EFEFEF;
+    padding: 124px 24px;
+}
+
+#下載段落-標題, #下載段落-按鈕 {
+    text-align: center;
+}
+
+#下載段落-標題 {
+    margin-bottom: 42px;
+}
+
+/* 頁腳 */
+.頁腳 {
+    box-shadow: inset 0 4px 0 0 #EFEFEF;
+    padding: 64px 24px;
+}
+
+.頁腳 .全寬區塊-內容 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#頁腳-左, #頁腳-左-清單 {
+    display: flex;
+}
+
+#頁腳-左-作者 {
+    display: flex;
+    margin-right: 88px;
+    align-items: center;
+}
+
+#頁腳-左-作者-圖片 {
+    width: 68px;
+    height: 68px;
+    background: url('https://chelinchan.com/src/img_doge_gray.jpg');
+    background-size: cover;
+    border-radius: 100%;
+    margin-right: 24px;
+}
+
+#頁腳-左-作者-頭銜 {
+    font-size: 14px;
+    font-width: 400;
+    margin-bottom: 4px
+}
+
+#頁腳-左-作者-名字 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 6px
+}
+
+#頁腳-左-作者-職業 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#頁腳-分隔線 {
+    height: 72px;
+    width: 2px;
+    background: #00000010;
+    display: block;
+}
+
+#頁腳-左-清單 {
+    margin-left: 88px;
+}
+
+.頁腳-左-清單-項目-標題 {
+    font-size: 13px;
+}
+
+.頁腳-左-清單-項目 {
+    margin-right: 88px;
+}
+
+.頁腳-左-清單-項目:last-child {
+    margin-right: 0;
+}
+
+.頁腳-左-清單-項目-選項 {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.頁腳-左-清單-項目-選項:hover {
+    opacity: 0.7;
+}
+
+#頁腳-右 {
+    font-size: 13px;
+    text-align: right;
+    opacity: 0.5;
+}
+
+#頁腳-右-更改多性別:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* 下載 - 頁首 */
+#下載-頁首 {
+    height: 668px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 76px 0 rgba(0,0,0,0.05);
+    position: relative;
+    display: block;width: 100%;
+}
+
+#下載-頁首-內容 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 0px;
+    box-sizing: border-box;
+}
+
+#下載-頁首-內容-說明 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#下載-頁首-內容-說明-圖示 {
+    background: url('../taiwanese-data/src/ic_download.png');
+    width: 76px;
+    height: 76px;
+    background-size: cover;
+    margin-bottom: 16px;
+}
+
+#下載-頁首-內容-說明 .大標題 {
+    margin-bottom: 28px;text-align: center;
+}
+
+#下載-頁首-內容-附註 {
+    height: 24px;
+    font-size: 14px;
+    opacity: 0.3;text-align: center;
+}
+
+#下載-頁首-內容-附註 a {
+    text-decoration: underline;
+}
+
+#下載-介紹-內容-標題 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.下載-介紹-兩欄-內容 {
+    max-width: 480px;
+    width: 100%;
+}
+
+.下載-介紹-兩欄-內容-圖片 {
+    width: 100%;
+
+    background-size: cover !important;
+    margin-bottom: 32px;padding-bottom: 62.5%;}
+
+.下載-圖片_文件 {
+    background: url("../taiwanese-data/src/img_download_viewDocs.jpg");
+}
+
+.下載-圖片_作者 {
+    background: url("../taiwanese-data/src/img_download_creator.jpg");
+}
+
+/* 平板電腦 */
+@media screen and (max-width: 1024px) {
+    /* 文字 */
+    .換行 {
+        display: unset;
+    }
+
+    /* 區塊 */
+    .內容-兩欄 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 48px;
+    }
+
+    /* 首頁-頁首 */
+    #首頁-頁首-上層 {
+        padding-top: 160px;
+    }
+    #首頁-頁首-下層 {
+        position: relative ;
+    }
+    #首頁-頁首-標題-說明 {
+        max-width: 500px;
+    }
+
+    /* 頁腳 */
+    .頁腳 {
+        padding: 64px 24px 24px;
+    }
+    .頁腳 .全寬區塊-內容 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #頁腳-左, #頁腳-左-清單 {
+        flex-direction: column ;
+    }
+
+    #頁腳-分隔線 {
+        display: none;
+    }
+
+    #頁腳-左-作者 {
+        margin-right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 32px;
+    }
+
+    #頁腳-左-作者-圖片 {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+
+    #頁腳-左-清單 {
+        margin-left: 0;
+    }
+
+    .頁腳-左-清單-項目 {
+        margin-bottom: 32px;
+    }
+
+    #頁腳-右 {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 724px) {
+    /* 文字 */
+    .大標題 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+    }
+
+    .大副標題 {
+        font-size: 19px;
+        font-weight: 400;
+    }
+
+    .中標題 {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .中次標題 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .中副標題 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .小標題 {
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    .內文 {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    /* 按鈕 */
+    .大按鈕 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .大按鈕:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 區塊 */
+    .兩欄 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .三欄 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* 首頁 - 頁首 */
+    #首頁-頁首-標題-Sketch {
+        font-size: 20px;
+    }
+
+    #首頁-頁首-標題-Sketch, #首頁-頁首-標題-大標題, #首頁-頁首-標題-說明 {
+        margin-bottom: 32px;
+    }
+
+    #首頁-頁首-標題-說明 {
+        max-width: 400px;
+        margin-bottom: 56px;
+    }
+
+    #首頁-頁首-下層-佔位 {
+        display: none;
+    }
+
+    .首頁-頁首-下層-內容-右-圖片_桌面 {
+        display: none;
+    }
+
+    .首頁-頁首-下層-內容-右-圖片_行動 {
+        display: block;
+    }
+
+    #首頁-頁首-下層-內容-右 img {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;min-height: unset;width: 100%;height: unset;
+    }
+
+    #首頁-頁首-下層-內容-右 {
+        height: auto;width: 100%;
+    }
+
+    #首頁-頁首-下層 {
+        width: 100%;
+    }
+
+    /* 介紹段落 */
+    .介紹段落 {
+        padding: 80px 24px;
+    }
+
+    .下載-介紹-兩欄-內容 {
+        max-width: unset;
+        width: 100%;
+    }
+}
