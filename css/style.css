@@ -192,6 +192,40 @@ a {
     color: #656565;
 }
 
+/* 讀取 */
+#讀取 {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    background: #F4F4F4;
+    justify-content: center;
+    align-items: center;
+    z-index: 30000000;
+    transition: 0.5s ease;
+    touch-action: none;
+    top: 0;
+    left: 0;
+}
+
+#讀取:after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("https://chelinchan.com/src/ic_loading.gif");
+    background-size: cover;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.讀取_離開 {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* 動畫 */
 @keyframes 動畫-捲動進入 {
     0% {
@@ -560,6 +594,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 
 #下載-頁首-內容-說明-圖示 {
