@@ -5,8 +5,13 @@ var monthsUntil = '';
 
 $(window).load(function() {
     isLoading = false;
+    setTimeout('loadingOut()', 1000);
     autoAnimations()
 });
+
+function loadingOut() {
+    $("#讀取").addClass("讀取_離開")
+}
 
 /* 動畫 */
 var scrollFadeIn = $('.動畫-捲動進入');
