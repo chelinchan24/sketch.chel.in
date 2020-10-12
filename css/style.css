@@ -575,7 +575,7 @@ a {
     background: #FFFFFF;
     box-shadow: 0 2px 76px 0 rgba(0,0,0,0.05);
     position: relative;
-    display: block;width: 100%;
+    display: block;width: 100%;z-index: 10;
 }
 
 #下載-頁首-內容 {
