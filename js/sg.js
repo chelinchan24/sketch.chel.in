@@ -119,3 +119,18 @@ function setGender() {
         $('.多性別').html('你')
     }
 }
+
+//回傳 Google Analystic
+$('#多性別選項-按鈕-開始瀏覽').click(function() {
+    if (gender == "female") {
+        gtag('event', 'sg_female', {
+            'event_category': 'sg_choose',
+            'event_label': 'sg',
+        });
+    } else {
+        gtag('event', 'sg_male', {
+            'event_category': 'sg_choose',
+            'event_label': 'sg',
+        });
+    }
+})
