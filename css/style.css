@@ -412,6 +412,11 @@ a {
     justify-content: flex-end;
 }
 
+#公告-容器-右-圖片 {
+    height: auto;
+    width: 100%;
+}
+
 #公告-容器-標籤 {
     font-size: 13px;
     font-weight: 500;
@@ -430,7 +435,7 @@ a {
 
 #公告-容器 img {
     width: 100%;
-    max-width: 435px;
+    /* max-width: 435px; */
 }
 
 /* 介紹段落 */
