@@ -19,5 +19,12 @@
             </description>
             <enclosure url="https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.2.0b.sketchplugin.zip" sparkle:version="0.2.0b"/>
         </item>
+        <item>
+            <title>版本 0.2.1b</title>
+            <description>
+                為了使產生結果更貼近現實情況，身分證字號中用於表示跨性別者的「7」改為不會自動產生，但仍可透過個人化選項來使用。
+            </description>
+            <enclosure url="https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.2.1b.sketchplugin.zip" sparkle:version="0.2.1b"/>
+        </item>
     </channel>
 </rss>
