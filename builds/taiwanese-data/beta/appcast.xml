@@ -6,11 +6,18 @@
         <description>Taiwanese Data Sketch Plugin Beta</description>
         <language>en</language>
         <item>
-            <title>版本 0.1.0a</title>
+            <title>版本 0.1.0b</title>
             <description>
                 首個 Beta 版本
             </description>
-            <enclosure url="https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.1.0b.sketchplugin.zip" sparkle:version="0.1.0b/>
+            <enclosure url="https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.1.0b.sketchplugin.zip" sparkle:version="0.1.0b"/>
+        </item>
+        <item>
+            <title>版本 0.2.0b</title>
+            <description>
+                支援產生身分證字號
+            </description>
+            <enclosure url="https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.2.0b.sketchplugin.zip" sparkle:version="0.2.0b"/>
         </item>
     </channel>
 </rss<name />
