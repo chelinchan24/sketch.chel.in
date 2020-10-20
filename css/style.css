@@ -182,6 +182,12 @@ a {
     line-height: 29px;
 }
 
+.中小標題 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
 .小標題 {
     font-size: 18px;
     font-weight: 700;
@@ -375,6 +381,56 @@ a {
 
 #首頁-頁首-標題-按鈕 {
     display: block;
+}
+
+/* 公告 */
+.公告區塊 {
+    padding-top: 88px;
+}
+
+#公告-容器 {
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    box-shadow: 0 15px 80px -5px rgba(0,0,0,0.09);
+    border-radius: 16px;
+    padding: 24px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#公告-容器-左 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+#公告-容器-右 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#公告-容器-標籤 {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 12px;
+    box-sizing: border-box;
+    display: inline-flex;
+    color: #E48013;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background: #FFF6DD;
+}
+
+#公告-容器-左 .中小標題 {
+    margin-bottom: 24px;
+}
+
+#公告-容器 img {
+    width: 100%;
+    max-width: 435px;
 }
 
 /* 介紹段落 */
@@ -740,6 +796,11 @@ a {
         font-weight: 400;
     }
 
+    .中小標題 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
     .小標題 {
         font-size: 17px;
         font-weight: 700;
@@ -815,6 +876,12 @@ a {
 
     #首頁-頁首-下層 {
         width: 100%;
+    }
+
+    /* 公告 */
+    #公告-容器-左 {
+        padding: 0px;
+        margin-bottom: 24px;
     }
 
     /* 介紹段落 */
