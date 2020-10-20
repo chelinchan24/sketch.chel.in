@@ -889,6 +889,10 @@ a {
         margin-bottom: 24px;
     }
 
+    #公告-容器-左 .中小標題 {
+        margin-bottom: 16px;
+    }
+
     /* 介紹段落 */
     .介紹段落 {
         padding: 80px 24px;
