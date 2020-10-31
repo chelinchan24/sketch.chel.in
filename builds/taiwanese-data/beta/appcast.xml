@@ -26,5 +26,12 @@
             </description>
             <enclosure url="https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.2.1b.sketchplugin.zip" sparkle:version="0.2.1b"/>
         </item>
+        <item>
+            <title>版本 0.2.2b</title>
+            <description>
+                修正了重複的地址路名前綴。
+            </description>
+            <enclosure url="https://sketch.chel.in/builds/taiwanese-data/beta/taiwanese-data_0.2.2b.sketchplugin.zip" sparkle:version="0.2.2b"/>
+        </item>
     </channel>
 </rss>
